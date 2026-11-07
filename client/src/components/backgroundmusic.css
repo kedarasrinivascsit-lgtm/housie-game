@@ -1,0 +1,122 @@
+.background-music-controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.background-music-toggle,
+.background-music-track select {
+    min-height: 39px;
+    padding: 9px 13px;
+    border: 1px solid rgba(229, 185, 79, 0.3);
+    border-radius: 10px;
+    background: #111c30;
+    color: #b9c3d3;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.background-music-toggle {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.background-music-toggle.active {
+    border-color: #e5b94f;
+    background: rgba(229, 185, 79, 0.13);
+    color: #e5b94f;
+}
+
+.background-music-toggle:hover {
+    transform: translateY(-2px);
+}
+
+.background-music-volume,
+.background-music-track {
+    display: flex;
+    min-height: 39px;
+    align-items: center;
+    gap: 8px;
+    padding: 0 10px;
+    border: 1px solid rgba(229, 185, 79, 0.22);
+    border-radius: 10px;
+    background: #111c30;
+    color: #b9c3d3;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.background-music-volume input {
+    width: 92px;
+    accent-color: #e5b94f;
+}
+
+.background-music-volume input:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.background-music-track select {
+    min-height: 30px;
+    padding: 5px 8px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.background-music-track option {
+    background: #111c30;
+    color: #fff;
+}
+
+.background-music-notice {
+    flex-basis: 100%;
+    color: #f0c873;
+    font-size: 11px;
+    text-align: right;
+}
+
+.lobby-card .background-music-controls {
+    justify-content: center;
+    margin: 18px 0;
+}
+
+.lobby-card .background-music-notice {
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .background-music-controls {
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .background-music-toggle {
+        min-height: 37px;
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+
+    .background-music-volume {
+        min-height: 37px;
+        padding: 0 8px;
+    }
+
+    .background-music-volume input {
+        width: 72px;
+    }
+
+    .background-music-track {
+        min-height: 37px;
+        padding: 0 7px;
+    }
+
+    .background-music-notice {
+        text-align: center;
+    }
+}
